@@ -21,8 +21,10 @@ jobs:
       name: Tests for changes
       runs-on: ubuntu-latest # OS for the GitHub-hosted virtual machine
       steps:
-        -name: npm install
-        run: npm install
+        - uses: actions/checkout@v2
 
-        -name: npm test
-        run: npm run test
+        - name: npm install
+          run: npm install
+
+        - name: npm test
+          run: npm run test
