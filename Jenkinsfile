@@ -1,9 +1,9 @@
 pipeline {
     agent { dockerfile true }
     stages {
-        stage('Build') {
+        stage('Build Docker Image') {
             steps {
-                sh 'node --version'
+                sh 'docker build -t nextjsapp:latest .'
             }
         }
     }
